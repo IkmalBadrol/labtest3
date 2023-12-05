@@ -39,9 +39,10 @@ class SQLiteDB{
     ''',
   ];
 
-  Future<int> insertBMI(Map<String, dynamic> bmiData) async {
+
+  Future<int> insertBMI(String tableName, Map<String, dynamic> row) async{
     Database db = await _instance.database;
-    return await db.insert('bitp3453_bmi', bmiData);
+    return await db.insert(tableName, row);
   }
 
   Future<List<Map<String, dynamic>>> queryAll(String tableName) async{

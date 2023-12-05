@@ -106,7 +106,8 @@ class _CalculatorState extends State<Calculator> {
         'bmi_status': statusController.text,
       };
 
-      await SQLiteDB().insertBMI(bmiData);
+      //await SQLiteDB().insertBMI(bmiData);
+      await SQLiteDB().insertBMI('bitp3453_bmi', bmiData) != 0;
 
     }
   }
